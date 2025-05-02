@@ -4,9 +4,10 @@ from widgets.todo_button import TodoButton
 from widgets.todo_list import TodoList
 
 class TodoView(QWidget):
+
     def __init__(self):
         super().__init__()
-        
+
     def initUI(self):
         
         self.setStyling()
@@ -19,22 +20,22 @@ class TodoView(QWidget):
         self.addWidgetToLayout(self.task_input)
 
         # Button zum Hinzufügen neuer Tasks
-        add_button = TodoButton("Task hinzufügen", self.addTask)
-        self.addWidgetToLayout(add_button)
+        self.add_button = TodoButton("Task hinzufügen")
+        self.addWidgetToLayout(self.add_button)
 
         # Liste für mehrere Tasks
         self.task_list = TodoList()
         self.addWidgetToLayout(self.task_list)
 
         # Button zum Löschen von Tasks
-        delete_button = TodoButton("Task löschen", self.deleteTask)
-        self.addWidgetToLayout(delete_button)
+        self.delete_button = TodoButton("Task löschen")
+        self.addWidgetToLayout(self.delete_button)
 
         self.setLayout(self.layout)
-        
-    def setStyling(self):
-        self.setWindowTitle("DAA-ToDo-Liste")
-        self.setFixedSize(400, 400)
 
     def addWidgetToLayout(self, widget):
         self.layout.addWidget(widget)
+
+    def setStyling(self):
+        self.setWindowTitle("Paco-ToDo-Liste")
+        self.setFixedSize(400, 400)
