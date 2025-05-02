@@ -26,7 +26,7 @@ class TodoApp(QWidget):
         self.layout.addWidget(widget)
 
     def setStyling(self):
-        self.setWindowTitle("Paco-ToDo-Liste")
+        self.setWindowTitle("DAA-ToDo-Liste")
         self.setFixedSize(400, 400)
 
     def initUI(self):
