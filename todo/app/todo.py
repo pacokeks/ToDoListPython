@@ -7,7 +7,7 @@ from widgets.todo_list import TodoList
 
 class TodoApp(QWidget):
     def __init__(self, dataName):
-        self.dataPath = os.getcwd() + '/GUI/todo/data/' + dataName
+        self.dataPath = os.getcwd() + '/GUI-Einfuehrung/todo/data/' + dataName
         print(self.dataPath)
         super().__init__()
         self.initUI()
